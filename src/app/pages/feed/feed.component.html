@@ -1,0 +1,16 @@
+<app-header></app-header>
+<span>
+  <div class="content">
+    <h1>Posts</h1>
+    <div class="content-card" *ngFor="let post of posts">
+      <h2>{{ post.title }}</h2>
+      <div class="content-card-body">
+        <h3>{{ post.body }}</h3>
+      </div>
+      <div class="content-card-button">
+        <button [routerLink]="['/', post.id, 'post']">Visualizar</button>
+      </div>
+    </div>
+  </div>
+</span>
+<app-footer></app-footer>

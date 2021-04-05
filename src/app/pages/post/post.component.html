@@ -1,0 +1,25 @@
+<app-header></app-header>
+<span>
+  <div class="content">
+    <div class="content-card-button">
+      <button [routerLink]="['/feed']">Voltar</button>
+    </div>
+    <div class="content-card" >
+      <h2>{{ post.title }}</h2>
+      <div class="content-card-body">
+        <h3>{{ post.body }}</h3>
+      </div>
+    </div>
+    <div class="content-comments" >
+      <h2>Comments</h2>
+    </div>
+    <div class="content-comments-card" *ngFor="let comment of comment">
+      <h2>{{ comment.name }}</h2>
+      <h4>{{ comment.email }}</h4>
+      <h3>{{ comment.body }}</h3>
+    </div>
+
+
+  </div>
+</span>
+<app-footer></app-footer>

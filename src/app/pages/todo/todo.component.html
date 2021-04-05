@@ -1,0 +1,23 @@
+<app-header></app-header>
+<span>
+  <div class="content">
+    <div class="content-top">
+      <h1 (click) ="onChangeAll()">To-do List</h1>
+      <div class="content-top-buttons">
+        <button (click) ="onChangeTrue()" >Completed</button>
+        <button (click) ="onChangeFalse()" >~Completed</button>
+      </div>
+    </div>
+
+    <div class="content-card" *ngFor="let todo of todo">
+
+      <h2>{{todo.title}}</h2>
+      <div class="content-card-body" >
+        <h3>Completed: {{todo.completed}}</h3>
+      </div>
+    </div>
+
+
+  </div>
+</span>
+<app-footer></app-footer>
